@@ -41,7 +41,7 @@ def apply_coupons(cart, coupons)
             sum_cart[item][:count] = sum_cart[item][:count] - coupon[:num]
           else
             sum_cart[item] = {}
-            sum_cart[item] = attribute
+#            sum_cart[item] = attribute
  #           binding.pry
           end
         end
