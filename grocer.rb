@@ -51,8 +51,7 @@ def apply_coupons(cart, coupons)
       end
     end
   else  
-    cart.each do |line_item|
-      line_item.each do |item, attribute|
+    cart.each do |item, attribute|
         coupons.each do | coupon |
      #     binding.pry
           if coupon[:item] == item
@@ -63,7 +62,6 @@ def apply_coupons(cart, coupons)
             binding.pry
           end
         end
-      end
     end
   end
   binding.pry
