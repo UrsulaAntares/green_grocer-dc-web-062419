@@ -30,7 +30,7 @@ def apply_coupons(cart, coupons)
       coupons.each do | coupon |
         binding.pry
         if coupon[:item] == item
-          sum_cart[item][:count] = sum_cart[item][:count] - coupon[:item][:count]
+          sum_cart[item][:count] = sum_cart[item][:count] - coupon[:num]
         end
       end
     end
