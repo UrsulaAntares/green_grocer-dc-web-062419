@@ -35,7 +35,7 @@ def apply_coupons(cart, coupons)
      sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = true
  #    binding.pry
    end
-  if cart.class == array 
+  if cart.class == Array 
     cart.each do |line_item|
       line_item.each do |item, attribute|
         coupons.each do | coupon |
