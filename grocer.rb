@@ -29,8 +29,9 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     discounted_items << coupon[:item]
   end
-  sum_cart["ITEM WITH W/COUPON"] = {}
-  
+  discounted_items.each do |thing_on_sale|
+    sum_cart[thing_on_sale] = {}
+  end
   cart.each do |line_item|
     line_item.each do |item, attribute|
       coupons.each do | coupon |
