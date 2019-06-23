@@ -24,7 +24,7 @@ end
 
 
 def apply_coupons(cart, coupons)
-  sum_cart = cart
+  sum_cart = {}
   discounted_items = []
   coupons.each do |coupon|
      sum_cart["#{coupon[:item]} W/COUPON"] = {}   
