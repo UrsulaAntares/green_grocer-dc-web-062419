@@ -47,7 +47,7 @@ def apply_coupons(cart, coupons)
         end
     end
 
-  binding.pry
+#  binding.pry
   sum_cart
 end
 
