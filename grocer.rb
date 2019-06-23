@@ -36,6 +36,7 @@ def apply_coupons(cart, coupons)
       end
     end
   end
+  sum_cart
 end
 
 
