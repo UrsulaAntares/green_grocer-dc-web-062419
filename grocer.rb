@@ -45,13 +45,13 @@ def apply_coupons(cart, coupons)
    #         binding.pry
           else
             sum_cart[item] = {}
-            binding.pry
+#            binding.pry
           end
         end
       end
     end
   end
-  binding.pry
+#  binding.pry
   sum_cart
 end
 
