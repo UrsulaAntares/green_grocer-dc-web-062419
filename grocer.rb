@@ -35,7 +35,6 @@ def apply_coupons(cart, coupons)
      sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = true
  #    binding.pry
    end
-
     cart.each do |item, attribute|
         coupons.each do | coupon |
      #     binding.pry
@@ -48,7 +47,7 @@ def apply_coupons(cart, coupons)
           end
         end
     end
-  end
+
   binding.pry
   sum_cart
 end
