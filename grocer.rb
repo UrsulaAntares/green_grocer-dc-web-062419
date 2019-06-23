@@ -28,10 +28,12 @@ def apply_coupons(cart, coupons)
   discounted_items = []
   coupons.each do |coupon|
      sum_cart["#{coupon[:item]} W/COUPON"] = {}   
-     sum_cart["#{coupon[:item]} W/COUPON"][:count] = coupon[:num]
-   #  sum_cart["#{coupon[:item]} W/COUPON"][:price] = (coupon[:cost] / coupon[:num])
-     binding.pry
   end
+  coupons.each do |coupon|
+     sum_cart["#{coupon[:item]} W/COUPON"][:count] = coupon[:num]
+     sum_cart["#{coupon[:item]} W/COUPON"][:price] = (coupon[:cost] / coupon[:num])
+     binding.pry
+   end
   cart.each do |line_item|
     line_item.each do |item, attribute|
       coupons.each do | coupon |
