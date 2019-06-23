@@ -30,7 +30,7 @@ def apply_coupons(cart, coupons)
     discounted_items << coupon[:item]
   end
   discounted_items.each do |thing_on_sale|
-    sum_cart[thing_on_sale] = {}
+    sum_cart["#{thing_on_sale} W/COUPON"] = {}
   end
   cart.each do |line_item|
     line_item.each do |item, attribute|
