@@ -25,10 +25,11 @@ end
 
 def apply_coupons(cart, coupons)
   sum_cart = cart
+  sum_cart["ITEM WITH W/COUPON"] = {}
+  
   cart.each do |line_item|
     line_item.each do |item, attribute|
       coupons.each do | coupon |
-        sum_cart["ITEM WITH W/COUPON"] = {}
         binding.pry
         if coupon[:item] == item
           sum_cart[item][:count] = sum_cart[item][:count] - coupon[:num]
