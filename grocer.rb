@@ -41,6 +41,7 @@ def apply_coupons(cart, coupons)
             end
             coupons.each do |coupon|
               binding.pry
+              if 
               sum_cart["#{coupon[:item]} W/COUPON"][:count] = coupon[:num]
               sum_cart["#{coupon[:item]} W/COUPON"][:price] = (coupon[:cost] / coupon[:num])
             end
