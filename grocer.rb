@@ -85,12 +85,9 @@ def apply_clearance(cart)
      adjusted_prices[item] = attributes
     if adjusted_prices[item][:clearance] == true  
       adjusted_prices[item][:price] = adjusted_prices[item][:price]*(0.8)
-binding.pry
     end
   end
-    binding.pry
   adjusted_prices
-
 end
 
 def checkout(cart, coupons)
