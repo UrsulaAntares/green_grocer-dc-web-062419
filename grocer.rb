@@ -41,9 +41,9 @@ def apply_coupons(cart, coupons)
             end
             coupons.each do |coupon|
  #             binding.pry
-              if sum_cart["#{coupon[:item]} W/COUPON"] != {} 
-                sum_cart["#{coupon[:item]} W/COUPON"] = {} 
-              end
+#              if sum_cart["#{coupon[:item]} W/COUPON"] != {} 
+#                sum_cart["#{coupon[:item]} W/COUPON"] = {} 
+#              end
               if sum_cart["#{coupon[:item]} W/COUPON"][:count] == nil
                 sum_cart["#{coupon[:item]} W/COUPON"][:count] = coupon[:num]
               else
