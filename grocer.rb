@@ -35,7 +35,6 @@ def apply_coupons(cart, coupons)
     
       coupons.each do |coupon|
         sum_cart[item] = {}
-        
           if coupon[:item] == item
             coupons.each do |coupon|
               sum_cart["#{coupon[:item]} W/COUPON"] = {}   
@@ -50,20 +49,14 @@ def apply_coupons(cart, coupons)
             coupons.each do |coupon|
               sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = cart[item][:clearance]
             end
-        
           end  #this is the end of the if courpon item line 40
-        
-      
-       
-
       end #this is the end of coupons.each do coupon line 36
       
        else
           sum_cart[item] = {}
           sum_cart[item] = attribute
           binding.pry
-      
-      
+
     end
   
   end #this seems to be end of if discounted_items
