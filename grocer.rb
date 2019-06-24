@@ -37,7 +37,7 @@ def apply_coupons(cart, coupons)
   end
   cart.each do |item, attribute|
     coupons.each do |coupon|
-      binding.pry
+ #     binding.pry
       sum_cart[item] = {}
 
       
