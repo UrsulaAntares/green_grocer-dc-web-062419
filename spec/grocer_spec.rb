@@ -154,7 +154,7 @@ describe "Grocer" do
   end
 
   describe "#apply_clearance" do
-    xit "takes 20% off price if the item is on clearance" do
+    it "takes 20% off price if the item is on clearance" do
       cart = [find_item('TEMPEH')]
       consolidated_cart = consolidate_cart(cart)
 
@@ -162,7 +162,7 @@ describe "Grocer" do
       expect(result["TEMPEH"][:price]).to eq(2.40)
     end
 
-    xit "does not discount the price for items not on clearance" do
+    it "does not discount the price for items not on clearance" do
       cart = [find_item('AVOCADO'), find_item('TEMPEH'), find_item('BEETS'), find_item('SOY MILK')]
       consolidated_cart = consolidate_cart(cart)
       result = apply_clearance(consolidated_cart)
