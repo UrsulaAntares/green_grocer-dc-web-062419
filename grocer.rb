@@ -43,6 +43,7 @@ def apply_coupons(cart, coupons)
 #        binding.pry
 #        sum_cart[item] = {}
         sum_cart[item][:count] = cart[item][:count] - coupon[:num]
+        sum_cart[item][:price] = cart[item][:price]
 #        binding.pry
       else
 #        sum_cart[item] = {}
