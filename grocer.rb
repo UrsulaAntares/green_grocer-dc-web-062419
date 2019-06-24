@@ -51,10 +51,10 @@ def apply_coupons(cart, coupons)
             end
           end  #this is the end of the if courpon item line 40
       end #this is the end of coupons.each do coupon line 36
-       else
-          sum_cart[item] = {}
-          sum_cart[item] = attribute
-#          binding.pry
+    else
+      sum_cart[item] = {}
+      sum_cart[item] = attribute
+#      binding.pry
     end
   end #this seems to be end of if discounted_items
 #  binding.pry
