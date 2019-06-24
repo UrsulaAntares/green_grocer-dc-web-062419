@@ -87,8 +87,9 @@ def apply_clearance(cart)
 
     end
   end
+    binding.pry
   cart
-  binding.pry
+
 end
 
 def checkout(cart, coupons)
