@@ -31,7 +31,7 @@ def apply_coupons(cart, coupons)
   end
 
   cart.each do |item, attribute|
-    if discounted_items.include?(item)
+    if discounted_items.include?(item) == true
       coupons.each do |coupon|
    #     binding.pry
         sum_cart[item] = {}
