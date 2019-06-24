@@ -38,6 +38,7 @@ def apply_coupons(cart, coupons)
   cart.each do |item, attribute|
     coupons.each do |coupon|
       if coupon[:item] == item
+        binding.pry
         sum_cart[item][:count] = sum_cart[item][:count] - coupon[:num]
         binding.pry
       else
