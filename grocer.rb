@@ -54,10 +54,10 @@ def apply_coupons(cart, coupons)
        else
           sum_cart[item] = {}
           sum_cart[item] = attribute
-          binding.pry
+#          binding.pry
     end
   end #this seems to be end of if discounted_items
-  binding.pry
+#  binding.pry
   sum_cart
 end
 
