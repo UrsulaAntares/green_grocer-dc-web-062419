@@ -79,7 +79,13 @@ end
 
 
 def apply_clearance(cart)
-  # code here
+  adjusted_prices = {}
+  cart.map do |line_item|
+    if line_item[:clearance] == true  
+      line_item[:price] = .8*line_item[:price]
+  binding.pry
+  end
+  cart
 end
 
 def checkout(cart, coupons)
