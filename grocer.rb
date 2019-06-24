@@ -80,7 +80,7 @@ end
 
 def apply_clearance(cart)
   adjusted_prices = {}
-  cart.each do |line_item|
+  cart.each do |item, attributes|
         binding.pry
 
     if line_item[:clearance] == true  
