@@ -83,7 +83,8 @@ def apply_clearance(cart)
   cart.map do |line_item|
     if line_item[:clearance] == true  
       line_item[:price] = .8*line_item[:price]
-  binding.pry
+    binding.pry
+    end
   end
   cart
 end
