@@ -52,10 +52,14 @@ def apply_coupons(cart, coupons)
               sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = cart[item][:clearance]
             end
         
-         end  
+          end  
+         
           
-          
-      end
+        end
+        else
+          sum_cart[item] = {}
+          sum_cart[item] = attribute
+          binding.pry
 
       end
 
