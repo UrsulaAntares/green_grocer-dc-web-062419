@@ -54,7 +54,7 @@ def apply_coupons(cart, coupons)
           end  #this is the end of the if courpon item line 40
         
          
-        end  
+        end  this is the end of sum_cart line 37
        
 
       end
