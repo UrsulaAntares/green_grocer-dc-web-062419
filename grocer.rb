@@ -51,7 +51,6 @@ def apply_coupons(cart, coupons)
           coupons.each do |coupon|
             sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = cart[item][:clearance]
           end
-        else
 
         end
       else
