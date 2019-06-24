@@ -63,7 +63,8 @@ def apply_coupons(cart, coupons)
       end
 
     end
-  end
+  
+  end #this seems to be end of if discounted_items
   binding.pry
   sum_cart
 end
