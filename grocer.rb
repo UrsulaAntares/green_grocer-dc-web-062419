@@ -52,7 +52,8 @@ def apply_coupons(cart, coupons)
               sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = cart[item][:clearance]
             end
         
-          end  #this is the end of the coupons,each do coupon in line 36
+          end  #this is the end of the if courpon item line 40
+        
          
         end  
         else
