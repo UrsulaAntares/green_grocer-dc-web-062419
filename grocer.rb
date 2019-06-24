@@ -45,19 +45,22 @@ def apply_coupons(cart, coupons)
               sum_cart["#{coupon[:item]} W/COUPON"][:count] = coupon[:num]
               sum_cart["#{coupon[:item]} W/COUPON"][:price] = (coupon[:cost] / coupon[:num])
             end
-          sum_cart[item][:count] = cart[item][:count] - coupon[:num]
-          sum_cart[item][:price] = cart[item][:price]
-          sum_cart[item][:clearance] = cart[item][:clearance]
-          coupons.each do |coupon|
+            sum_cart[item][:count] = cart[item][:count] - coupon[:num]
+            sum_cart[item][:price] = cart[item][:price]
+            sum_cart[item][:clearance] = cart[item][:clearance]
+            coupons.each do |coupon|
             sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = cart[item][:clearance]
-          end
-
-        end
-     else
-        sum_cart[item] = {}
-        sum_cart[item] = attribute
-        binding.pry
+        else
+          sum_cart[item] = {}
+          sum_cart[item] = attribute
+          binding.pry
+        end  
+          
+          
       end
+
+      end
+
     end
   end
   binding.pry
