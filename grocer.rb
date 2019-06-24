@@ -83,8 +83,8 @@ def apply_clearance(cart)
   cart.each do |item, attributes|
      adjusted_prices[item] = {}
      adjusted_prices[item] = attributes
-    if item[:clearance] == true  
-      item[:price] = item[:price]*(0.8)
+    if adjusted_prices[item][:clearance] == true  
+      adjusted_prices[item][:price] = adjusted_prices[item][:price]*(0.8)
 binding.pry
     end
   end
