@@ -47,8 +47,9 @@ def apply_coupons(cart, coupons)
                 sum_cart["#{coupon[:item]} W/COUPON"][:count] = sum_cart["#{coupon[:item]} W/COUPON"][:count] + coupon[:num]
               end
               sum_cart["#{coupon[:item]} W/COUPON"][:price] = (coupon[:cost] / coupon[:num])
+              sum_cart[item][:count] = cart[item][:count] - coupon[:num]
             end
-            sum_cart[item][:count] = cart[item][:count] - coupon[:num]
+#            sum_cart[item][:count] = cart[item][:count] - coupon[:num]
             sum_cart[item][:price] = cart[item][:price]
             sum_cart[item][:clearance] = cart[item][:clearance]
             coupons.each do |coupon|
