@@ -52,9 +52,9 @@ def apply_coupons(cart, coupons)
               sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = cart[item][:clearance]
             end
         
-          end  
+          end  #this is the end of the coupons,each do coupon in line 36
          
-        end  #this is the end of the coupo
+        end  
         else
           sum_cart[item] = {}
           sum_cart[item] = attribute
