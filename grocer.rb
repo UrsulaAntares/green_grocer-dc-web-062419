@@ -26,36 +26,36 @@ end
 def apply_coupons(cart, coupons)
   sum_cart = {}
   discounted_items = []
+  coupons.each do |coupon|
+    discounted_items << coupon[:item]
+  end
 
-#here used to be the coupon iteration
   cart.each do |item, attribute|
-    coupons.each do |coupon|
- #     binding.pry
-      sum_cart[item] = {}
-
-      
-      if coupon[:item] == item
+    if discounted_items.include?(item)
+      coupons.each do |coupon|
+   #     binding.pry
+        sum_cart[item] = {}
+  
+        
+        if coupon[:item] == item
+            coupons.each do |coupon|
+              sum_cart["#{coupon[:item]} W/COUPON"] = {}   
+            end
+            coupons.each do |coupon|
+              sum_cart["#{coupon[:item]} W/COUPON"][:count] = coupon[:num]
+              sum_cart["#{coupon[:item]} W/COUPON"][:price] = (coupon[:cost] / coupon[:num])
+            end
+          sum_cart[item][:count] = cart[item][:count] - coupon[:num]
+          sum_cart[item][:price] = cart[item][:price]
+          sum_cart[item][:clearance] = cart[item][:clearance]
           coupons.each do |coupon|
-            sum_cart["#{coupon[:item]} W/COUPON"] = {}   
+            sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = cart[item][:clearance]
           end
-          coupons.each do |coupon|
-            sum_cart["#{coupon[:item]} W/COUPON"][:count] = coupon[:num]
-            sum_cart["#{coupon[:item]} W/COUPON"][:price] = (coupon[:cost] / coupon[:num])
-          end
-#        binding.pry
-#        sum_cart[item] = {}
-        sum_cart[item][:count] = cart[item][:count] - coupon[:num]
-        sum_cart[item][:price] = cart[item][:price]
-        sum_cart[item][:clearance] = cart[item][:clearance]
-        coupons.each do |coupon|
-          sum_cart["#{coupon[:item]} W/COUPON"][:clearance] = cart[item][:clearance]
+        else
+  #        sum_cart[item] = {}
+          sum_cart[item] = attribute
+  #        binding.pry
         end
-#        binding.pry
-      else
-#        sum_cart[item] = {}
-        sum_cart[item] = attribute
-#        binding.pry
-      end
     end
   end
   binding.pry
