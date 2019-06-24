@@ -41,7 +41,7 @@ def apply_coupons(cart, coupons)
             end
             coupons.each do |coupon|
  #             binding.pry
-#              if sum_cart["#{coupon[:item]} W/COUPON"] != {} 
+#              if sum_cart["#{coupon[:item]} W/COUPON"] != {}   ##I'm not sure how to handle multiple coupons that are different. I can count coupons that are similar but not sure how to take different kinds of discounts  on the same types of items.
 #                sum_cart["#{coupon[:item]} W/COUPON"] = {} 
 #              end
               if sum_cart["#{coupon[:item]} W/COUPON"][:count] == nil
