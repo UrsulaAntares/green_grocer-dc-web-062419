@@ -57,7 +57,7 @@ def apply_coupons(cart, coupons)
         end  this is the end of sum_cart line 37
        
 
-      end #this is the end of coupons.each do coupon line 37
+      end #this is the end of coupons.each do coupon line 36
 
     end
   
