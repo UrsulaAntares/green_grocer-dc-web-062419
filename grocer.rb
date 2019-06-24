@@ -34,7 +34,6 @@ def apply_coupons(cart, coupons)
     if discounted_items.include?(item) == true
     
       coupons.each do |coupon|
-   #     binding.pry
         sum_cart[item] = {}
         
           if coupon[:item] == item
@@ -56,10 +55,7 @@ def apply_coupons(cart, coupons)
         
          
         end  
-        else
-          sum_cart[item] = {}
-          sum_cart[item] = attribute
-          binding.pry
+       
 
       end
 
